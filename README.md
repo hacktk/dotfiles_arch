@@ -1,12 +1,63 @@
-# dotfiles (arch linux)
+# Arch Linux setup
 
-## Initialize
+基本的にArchWikiのInstallation guideを見て進める。
+
+https://wiki.archlinux.org/index.php/Installation_guide
+
+## bootメディア作成
+これを見てよしなに作る。
+
+https://wiki.archlinux.org/index.php/USB_flash_installation_medium
+
+## UEFIで起動
+PC起動時になんらかのキー（要調査）でBIOSかUEFIの設定画面に入り、起動順を指定する。
+
 ```
-# generate ssh key & manually add it to github
-$ ssh-keygen -t rsa -b 4096 -C "hacktk3@gmail.com"
-
-# install
-$ bash -c "$(curl -L https://raw.githubusercontent.com/hacktk/dotfiles_arch/master/install.sh)"
+# このパスが存在すればUEFIで起動されている
+ls /sys/firmware/efi/efivars
 ```
 
+## ファイルシステムの準備
+EFI system partitionとrootパーティションの2つをつくる。（スワップはとりあえず不要）
 
+```
+# SSDのデバイス名を確認(以降/dev/sdaだった場合で記述する)
+lsblk
+
+# partedで設定開始
+parted /dev/sda
+(parted) mklabel gpt
+(parted) mkpart ESP fat32 1MiB 551MiB
+(parted) set 1 esp on
+(parted) mkpart primary ext4 551MiB 100%
+(parted) quit
+
+# /dev/sda1がESP、/dev/sda2がrootパーティションであることを確認して初期化
+lsblk /dev/sda
+mkfs.fat -F32 /dev/sda1
+mkfs.ext4 /dev/sda2
+
+# それぞれマウント
+mount /dev/sda2 /mnt
+mkdir /mnt/boot
+mount /dev/sda1 /mnt/boot
+```
+
+## インストール
+```
+# 必須パッケージのインストール
+pacstrap /mnt base linux linux-firmware
+
+# fstab作成
+genfstab -U /mnt >> /mnt/etc/fstab
+
+# ここからは/mntにchrootして作業する
+arch-chroot /mnt
+
+# セットアップスクリプトの実行
+bash -c "$(curl -L https://raw.githubusercontent.com/hacktk/dotfiles_arch/master/initialize.sh)"
+
+# 一旦終了（bootメディアを抜いたあと起動する）
+exit
+shutdown -h now
+```
