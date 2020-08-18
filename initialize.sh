@@ -25,5 +25,8 @@ pacman -S grub efibootmgr
 grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=arch_grub --recheck
 grub-mkconfig -o /boot/grub/grub.cfg
 
-# root password
-passwd
+# main user
+pacman -S sudo
+useradd -m -g wheel hacktk
+passwd hacktk
+echo "%wheel ALL=(ALL) ALL" > /etc/sudoers.d/wheel
