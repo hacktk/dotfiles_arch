@@ -23,21 +23,27 @@ echo "m75q" > /etc/hostname
 echo "127.0.0.1 localhost m75q m75q.localdomain" >> /etc/hosts
 
 # grub
-pacman -S grub efibootmgr
+pacman -S --noconfirm grub efibootmgr
 grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=arch_grub --recheck
 grub-mkconfig -o /boot/grub/grub.cfg
 
 # xorg
-pacman -S xorg-server xorg-xinit
+pacman -S --noconfirm xorg-server xorg-xinit
+startx
 
 # graphic driver
-pacman -S xf86-video-amdgpu mesa
+pacman -S --noconfirm xf86-video-amdgpu mesa
 
 # gnome
-pacman -S gnome
+pacman -S --noconfirm gnome
+systemctl enable gdm
+
+# network
+pacman -S --noconfirm networkmanager
+systemctl enable NetworkManager
 
 # main user
-pacman -S sudo
+pacman -S --noconfirm sudo
 useradd -m -g wheel hacktk
 passwd hacktk
 echo "%wheel ALL=(ALL) ALL" > /etc/sudoers.d/wheel
