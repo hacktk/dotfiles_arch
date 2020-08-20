@@ -29,13 +29,15 @@ grub-mkconfig -o /boot/grub/grub.cfg
 
 # xorg
 pacman -S --noconfirm xorg-server xorg-xinit
-startx
 
 # graphic driver
 pacman -S --noconfirm xf86-video-amdgpu mesa
 
 # gnome
 pacman -S --noconfirm gnome
+
+# enable x, display manager
+startx
 systemctl enable gdm
 
 # network
