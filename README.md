@@ -1,23 +1,22 @@
 # Arch Linux setup
 
-基本的にArchWikiのInstallation guideを見て進める。
-
+基本的にArchWikiのInstallation guideを見て進める。  
 https://wiki.archlinux.org/index.php/Installation_guide
 
-## bootメディア作成
-これを見てよしなに作る。
-
+bootメディアはこれを見てよしなに作る。  
 https://wiki.archlinux.org/index.php/USB_flash_installation_medium
 
-## UEFIで起動
-PC起動時になんらかのキー（要調査）でBIOSかUEFIの設定画面に入り、起動順を指定する。
+## 初期化
+
+### UEFIで起動
+PC起動時になんらかのキー（要調査）でBIOSかUEFIの設定画面に入り、USBが最初になるよう起動順を指定する。
 
 ```
 # このパスが存在すればUEFIで起動されている
 ls /sys/firmware/efi/efivars
 ```
 
-## ファイルシステムの準備
+### ファイルシステムの準備
 EFI system partitionとrootパーティションの2つをつくる。（スワップはとりあえず不要）
 
 ```
@@ -43,9 +42,12 @@ mkdir /mnt/boot
 mount /dev/sda1 /mnt/boot
 ```
 
-## インストール
+### OS設定
+言語やユーザー、GUIなど基本の設定を行う。
+
 ```
 # 必須パッケージのインストール
+# https://www.archlinux.jp/packages/core/any/base/
 pacstrap /mnt base linux linux-firmware
 
 # fstab作成
@@ -54,10 +56,21 @@ genfstab -U /mnt >> /mnt/etc/fstab
 # ここからは/mntにchrootして作業する
 arch-chroot /mnt
 
-# セットアップスクリプトの実行
+# 初期化スクリプトの実行
 bash -c "$(curl -L https://raw.githubusercontent.com/hacktk/dotfiles_arch/master/initialize.sh)"
 
 # 一旦終了（bootメディアを抜いたあと起動する）
 exit
 shutdown -h now
+```
+
+## ユーザー環境セットアップ
+
+以降は作成したユーザーでログイン(GUI)して作業する。
+
+### セットアップ
+Terminalを開き、セットアップスクリプトを実行する。
+
+```
+bash -c "$(curl -L https://raw.githubusercontent.com/hacktk/dotfiles_arch/master/setup.sh)"
 ```

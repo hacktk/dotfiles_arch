@@ -27,18 +27,22 @@ pacman -S --noconfirm grub efibootmgr
 grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=arch_grub --recheck
 grub-mkconfig -o /boot/grub/grub.cfg
 
-# xorg
-pacman -S --noconfirm xorg-server xorg-xinit
-
-# graphic driver
+# graphic driver (for AMD)
 pacman -S --noconfirm xf86-video-amdgpu mesa
 
-# gnome
-pacman -S --noconfirm gnome
+# cpu microcode (for AMD)
+pacman -S --noconfirm amd-ucode
 
-# enable x, display manager
-startx
-systemctl enable gdm
+# xorg
+pacman -S --noconfirm xorg-server
+
+# gnome minimal
+# pick from https://www.archlinux.org/groups/x86_64/gnome/
+pacman -S --noconfirm eog gnome-control-center gnome-keyring gnome-shell gnome-terminal nautilus xdg-user-dirs
+
+# display manager
+pacman -S --noconfirm lightdm lightdm-gtk-greeter
+systemctl enable lightdm
 
 # network
 pacman -S --noconfirm networkmanager
