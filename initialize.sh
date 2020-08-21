@@ -40,6 +40,9 @@ pacman -S --noconfirm xorg-server
 # pick from https://www.archlinux.org/groups/x86_64/gnome/
 pacman -S --noconfirm eog gnome-control-center gnome-keyring gnome-shell gnome-terminal nautilus xdg-user-dirs
 
+# firefox
+pacman -S firefox
+
 # display manager
 pacman -S --noconfirm lightdm lightdm-gtk-greeter
 systemctl enable lightdm

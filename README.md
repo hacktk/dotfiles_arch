@@ -69,8 +69,12 @@ shutdown -h now
 以降は作成したユーザーでログイン(GUI)して作業する。
 
 ### セットアップ
-Terminalを開き、セットアップスクリプトを実行する。
+セットアップスクリプトを実行する。
 
 ```
+# ssh鍵をつくり、FirefoxでGitHubに登録しておく
+ssh-keygen -t rsa -b 4096 -C "hacktk3@gmail.com"
+
+# 実行
 bash -c "$(curl -L https://raw.githubusercontent.com/hacktk/dotfiles_arch/master/setup.sh)"
 ```

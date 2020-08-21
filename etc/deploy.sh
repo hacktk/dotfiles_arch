@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -eux
+
 DOT_PATH="$HOME/repo/dotfiles_arch"
 
 if [ ! -d "$DOT_PATH" ]; then
