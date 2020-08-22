@@ -77,4 +77,6 @@ ssh-keygen -t rsa -b 4096 -C "hacktk3@gmail.com"
 
 # 実行
 bash -c "$(curl -L https://raw.githubusercontent.com/hacktk/dotfiles_arch/master/setup.sh)"
+
+# 終わったら再起動
 ```

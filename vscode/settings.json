@@ -1,0 +1,51 @@
+{
+    "breadcrumbs.enabled": false,
+    "editor.cursorBlinking": "blink",
+    "editor.cursorStyle": "line-thin",
+    "editor.folding": false,
+    "editor.fontFamily": "Ricty",
+    "editor.fontSize": 16,
+    "editor.links": false,
+    "editor.minimap.renderCharacters": false,
+    "editor.minimap.showSlider": "always",
+    "editor.renderControlCharacters": true,
+    "editor.renderWhitespace": "boundary",
+    "editor.rulers": [
+        120
+    ],
+    "explorer.compactFolders": false,
+    "files.exclude": {
+        "**/.git": false,
+        "**/.svn": false,
+        "**/.hg": false,
+        "**/CVS": false
+    },
+    "files.insertFinalNewline": true,
+    "files.trimFinalNewlines": true,
+    "files.trimTrailingWhitespace": true,
+    "[markdown]": {
+        "files.trimTrailingWhitespace": false
+    },
+    "php.suggest.basic": false,
+    "search.useIgnoreFiles": false,
+    "[terraform]": {
+        "editor.formatOnSave": true
+    },
+    "terraform.languageServer": {
+        "external": true,
+        "args": [
+            "serve"
+        ]
+    },
+    "terminal.integrated.cursorBlinking": true,
+    "terminal.integrated.fontFamily": "Ricty",
+    "terminal.integrated.fontSize": 16,
+    "timeline.excludeSources": [
+        "git-history"
+    ],
+    "workbench.activityBar.visible": false,
+    "workbench.colorTheme": "Monokai",
+    "workbench.iconTheme": "vscode-icons",
+    "workbench.startupEditor": "newUntitledFile",
+    "workbench.statusBar.visible": false
+}

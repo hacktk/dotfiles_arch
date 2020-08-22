@@ -23,36 +23,36 @@ echo "m75q" > /etc/hostname
 echo "127.0.0.1 localhost m75q m75q.localdomain" >> /etc/hosts
 
 # grub
-pacman -S --noconfirm grub efibootmgr
+pacman -S --needed --noconfirm grub efibootmgr
 grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=arch_grub --recheck
 grub-mkconfig -o /boot/grub/grub.cfg
 
 # graphic driver (for AMD)
-pacman -S --noconfirm xf86-video-amdgpu mesa
+pacman -S --needed --noconfirm xf86-video-amdgpu mesa
 
 # cpu microcode (for AMD)
-pacman -S --noconfirm amd-ucode
+pacman -S --needed --noconfirm amd-ucode
 
 # xorg
-pacman -S --noconfirm xorg-server
+pacman -S --needed --noconfirm xorg-server
 
 # gnome minimal
 # pick from https://www.archlinux.org/groups/x86_64/gnome/
-pacman -S --noconfirm eog gnome-control-center gnome-keyring gnome-shell gnome-terminal nautilus xdg-user-dirs
+pacman -S --needed --noconfirm eog gnome-control-center gnome-keyring gnome-shell gnome-terminal nautilus
 
-# firefox
-pacman -S firefox
+# other necessary packages
+pacman -S --needed --noconfirm base-devel firefox xdg-user-dirs
 
 # display manager
-pacman -S --noconfirm lightdm lightdm-gtk-greeter
+pacman -S --needed --noconfirm lightdm lightdm-gtk-greeter
 systemctl enable lightdm
 
 # network
-pacman -S --noconfirm networkmanager
+pacman -S --needed --noconfirm networkmanager
 systemctl enable NetworkManager
 
 # main user
-pacman -S --noconfirm sudo
+pacman -S --needed --noconfirm sudo
 useradd -m -g wheel hacktk
 passwd hacktk
 echo "%wheel ALL=(ALL) ALL" > /etc/sudoers.d/wheel

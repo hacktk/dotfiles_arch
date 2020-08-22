@@ -15,3 +15,22 @@ for file in .??*; do
     [[ "$file" = ".git" ]] && continue
     ln -fvs "$DOT_PATH/$file" "$HOME/$file"
 done
+
+# git
+ln -fvs "/usr/share/git/diff-highlight/diff-highlight" "/usr/local/bin/diff-highlight"
+
+# ricty
+fc-cache -fv
+
+# terraform
+mkdir -p "$HOME/.terraform.d/plugin-cache"
+
+# vscode
+cat "$DOT_PATH/vscode/extensions" | while read line
+do
+    code --install-extension $line
+done
+code --list-extensions > "$DOT_PATH/vscode/extensions"
+VSC_PATH="$HOME/.config/Code/User"
+ln -fvs "$DOT_PATH/vscode/settings.json" "$VSC_PATH/settings.json"
+ln -fvs "$DOT_PATH/vscode/keybindings.json" "$VSC_PATH/keybindings.json"
