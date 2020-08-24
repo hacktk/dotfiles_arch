@@ -80,3 +80,9 @@ bash -c "$(curl -L https://raw.githubusercontent.com/hacktk/dotfiles_arch/master
 
 # 終わったら再起動
 ```
+
+### Mozcの有効化
+
+1. fcitx-config-gtk3を起動する
+2. Input MethodタブでMozcを追加する
+3. Appearanceタブ -> ClassicUI -> Skin Nameをdarkに変更する
