@@ -23,8 +23,18 @@ sudo pacman -S --needed --noconfirm docker docker-compose
 # fcitx, mozc
 sudo pacman -S --needed --noconfirm fcitx fcitx-configtool fcitx-mozc fcitx-qt5
 
+# gestures
+GESTURES_PATH="/tmp/gestures"
+mkdir -p $GESTURES_PATH && cd $GESTURES_PATH
+git clone https://aur.archlinux.org/libinput-gestures.git ./
+makepkg -cirs --needed --noconfirm
+cd $CUR_PATH && rm -rf $GESTURES_PATH
+
 # git
 sudo pacman -S --needed --noconfirm git
+
+# go
+sudo pacman -S --needed --noconfirm go
 
 # google chrome
 CHROME_PATH="/tmp/chrome"
@@ -35,6 +45,9 @@ cd $CUR_PATH && rm -rf $CHROME_PATH
 
 # hugo
 sudo pacman -S --needed --noconfirm hugo
+
+# php
+sudo pacman -S --needed --noconfirm php
 
 # ricty
 sudo pacman -S --needed --noconfirm fontforge ttf-inconsolata
@@ -55,7 +68,11 @@ cd $CUR_PATH && rm -rf $RICTY_PATH
 sudo pacman -S --needed --noconfirm terraform
 
 # vscode
-sudo pacman -S --needed --noconfirm code
+VSCODE_PATH="/tmp/vscode"
+mkdir -p $VSCODE_PATH && cd $VSCODE_PATH
+git clone https://aur.archlinux.org/visual-studio-code-bin.git ./
+makepkg -cirs --needed --noconfirm
+cd $CUR_PATH && rm -rf $VSCODE_PATH
 
 # vlc
 sudo pacman -S --needed --noconfirm vlc

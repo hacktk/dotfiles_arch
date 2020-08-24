@@ -18,15 +18,15 @@ fi
 cd "$DOT_PATH"
 
 # install packages
-etc/install.sh
+scripts/install.sh
 echo
 
 # deploy dotfiles
-etc/deploy.sh
+scripts/deploy.sh
 echo
 
 # configure environments
-etc/configure.sh
+scripts/configure.sh
 echo
 
 echo "setup finished."

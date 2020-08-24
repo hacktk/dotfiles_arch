@@ -16,8 +16,13 @@ for file in .??*; do
     ln -fvs "$DOT_PATH/$file" "$HOME/$file"
 done
 
+# gestures
+sudo gpasswd -a $USER input
+ln -fvs "$DOT_PATH/gestures/libinput-gestures.conf" "$HOME/.config/libinput-gestures.conf"
+libinput-gestures-setup autostart
+
 # git
-ln -fvs "/usr/share/git/diff-highlight/diff-highlight" "/usr/local/bin/diff-highlight"
+sudo ln -fvs "/usr/share/git/diff-highlight/diff-highlight" "/usr/local/bin/diff-highlight"
 
 # ricty
 fc-cache -fv
