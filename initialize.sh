@@ -41,7 +41,7 @@ pacman -S --needed --noconfirm xorg-server
 pacman -S --needed --noconfirm eog gnome-control-center gnome-keyring gnome-shell gnome-terminal nautilus
 
 # other necessary packages
-pacman -S --needed --noconfirm base-devel firefox xdg-user-dirs
+pacman -S --needed --noconfirm base-devel firefox xdg-user-dirs vim
 
 # display manager
 pacman -S --needed --noconfirm lightdm lightdm-gtk-greeter
@@ -50,6 +50,7 @@ systemctl enable lightdm
 # network
 pacman -S --needed --noconfirm networkmanager
 systemctl enable NetworkManager
+systemctl enable bluetooth
 
 # main user
 pacman -S --needed --noconfirm sudo

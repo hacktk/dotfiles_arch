@@ -17,8 +17,16 @@ git clone https://aur.archlinux.org/gnome-shell-extension-dash-to-dock.git ./
 makepkg -cirs --needed --noconfirm
 cd $CUR_PATH && rm -rf $DOCK_PATH
 
+# dbus-action
+DBUS_PATH="/tmp/dbus-action"
+mkdir -p $DBUS_PATH && cd $DBUS_PATH
+git clone https://aur.archlinux.org/dbus-action.git ./
+makepkg -cirs --needed --noconfirm
+cd $CUR_PATH && rm -rf $DBUS_PATH
+
 # docker
 sudo pacman -S --needed --noconfirm docker docker-compose
+systemctl enable docker
 
 # fcitx, mozc
 sudo pacman -S --needed --noconfirm fcitx fcitx-configtool fcitx-mozc fcitx-qt5
@@ -45,6 +53,9 @@ cd $CUR_PATH && rm -rf $CHROME_PATH
 
 # hugo
 sudo pacman -S --needed --noconfirm hugo
+
+# noto
+sudo pacman -S --needed --noconfirm noto-fonts noto-fonts-cjk noto-fonts-emoji
 
 # php
 sudo pacman -S --needed --noconfirm php
