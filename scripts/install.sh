@@ -90,3 +90,10 @@ sudo pacman -S --needed --noconfirm vlc
 
 # xrandr
 sudo pacman -S --needed --noconfirm xorg-xrandr
+
+# zoom
+ZOOM_PATH="/tmp/zoom"
+mkdir -p $ZOOM_PATH && cd $ZOOM_PATH
+git clone https://aur.archlinux.org/zoom.git ./
+makepkg -cirs --needed --noconfirm
+cd $CUR_PATH && rm -rf $ZOOM_PATH
