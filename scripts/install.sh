@@ -88,6 +88,14 @@ cd $CUR_PATH && rm -rf $VSCODE_PATH
 # vlc
 sudo pacman -S --needed --noconfirm vlc
 
+# vpn
+sudo pacman -S --needed --noconfirm xl2tpd strongswan
+NML2TP_PATH="/tmp/nml2tp"
+mkdir -p $NML2TP_PATH && cd $NML2TP_PATH
+git clone https://aur.archlinux.org/networkmanager-l2tp.git ./
+makepkg -cirs --needed --noconfirm
+cd $CUR_PATH && rm -rf $NML2TP_PATH
+
 # xrandr
 sudo pacman -S --needed --noconfirm xorg-xrandr
 
