@@ -4,6 +4,7 @@
 [color]
     ui = auto
 [core]
+    editor = vim
     excludesfile = ~/.gitignore
     ignorecase = false
     quotepath = false
