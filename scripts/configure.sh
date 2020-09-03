@@ -40,7 +40,8 @@ gsettings set org.gnome.shell.extensions.dash-to-dock scroll-switch-workspace fa
 gsettings set org.gnome.shell.extensions.dash-to-dock show-windows-preview false
 gsettings set org.gnome.shell.extensions.dash-to-dock show-favorites false
 
-# nautilus
+# mutter, nautilus
+gsettings set org.gnome.mutter edge-tiling false
 gsettings set org.gnome.nautilus.preferences default-folder-viewer 'list-view'
 
 # date & time
