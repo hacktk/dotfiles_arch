@@ -21,7 +21,6 @@ yay -S --needed --noconfirm dbus-action
 
 # docker
 yay -S --needed --noconfirm docker docker-compose
-systemctl enable docker
 
 # fcitx, mozc
 yay -S --needed --noconfirm fcitx fcitx-configtool fcitx-mozc fcitx-qt5
