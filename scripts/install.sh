@@ -11,7 +11,7 @@ makepkg -cirs --needed --noconfirm
 cd $CUR_PATH && rm -rf $YAY_PATH
 
 # aws-cli
-ysy -S --needed --noconfirm aws-cli
+yay -S --needed --noconfirm aws-cli
 
 # bash completion
 yay -S --needed --noconfirm bash-completion
