@@ -22,7 +22,7 @@ dbus-action-setup autostart
 
 # docker
 sudo gpasswd -a $USER docker
-systemctl enable docker
+sudo systemctl enable docker
 
 # gestures
 sudo gpasswd -a $USER input
