@@ -65,7 +65,22 @@ yay -S --needed --noconfirm visual-studio-code-bin
 yay -S --needed --noconfirm vlc
 
 # vpn
-yay -S --needed --noconfirm xl2tpd strongswan networkmanager-l2tp
+yay -S --needed --noconfirm xl2tpd strongswan
+CUR_PATH=$(pwd)
+NML2TP_PATH="/tmp/nml2tp"
+mkdir -p $NML2TP_PATH && cd $NML2TP_PATH
+git clone git@github.com:nm-l2tp/NetworkManager-l2tp.git ./
+sed -i -e 's/udp\/l2tp/udp\/%%any/g' src/nm-l2tp-service.c
+./autogen.sh
+./configure \
+  --disable-static --prefix=/usr \
+  --sysconfdir=/etc --libdir=/usr/lib64 \
+  --libexecdir=/usr/lib/NetworkManager \
+  --localstatedir=/var \
+  --with-pppd-plugin-dir=/usr/lib/pppd/2.4.7
+make
+sudo make install
+cd $CUR_PATH && rm -rf $NML2TP_PATH
 
 # xrandr
 yay -S --needed --noconfirm xorg-xrandr
