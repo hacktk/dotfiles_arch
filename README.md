@@ -42,6 +42,36 @@ mkdir /mnt/boot
 mount /dev/sda1 /mnt/boot
 ```
 
+### ネットワーク接続
+ネットワークに接続する。  
+以降、デバイスは認識済み、SSID/passwordも把握済み、かつWPA/WPA2として進める
+
+```
+# interface確認（以降wlp2s0だった場合で記述する）
+ip link
+
+# wpa_supplicant
+touch /etc/wpa_supplicant/wifi.conf
+echo "ctrl_interface=/run/wpa_supplicant" >> /etc/wpa_supplicant/wifi.conf
+echo "update_config=1" >> /etc/wpa_supplicant/wifi.conf
+wpa_supplicant -B -i wlp2s0 -c /etc/wpa_supplicant/wifi.conf
+
+# wpa_cli
+wpa_cli
+add_network 0
+set_network 0 ssid "自宅APのSSID"
+set_network 0 psk "自宅APのPSK"
+enable_network 0
+save_config
+q
+
+# dhcp
+dhcpcd wlp2s0
+
+# 接続確認
+ping google.com
+```
+
 ### OS設定
 言語やユーザー、GUIなど基本の設定を行う。
 
