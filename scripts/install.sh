@@ -49,6 +49,9 @@ yay -S --needed --noconfirm mysql-workbench
 # noto
 yay -S --needed --noconfirm noto-fonts noto-fonts-cjk noto-fonts-emoji
 
+# peek
+yay -S --needed --noconfirm peek
+
 # php
 yay -S --needed --noconfirm php
 
