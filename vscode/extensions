@@ -3,11 +3,14 @@ EditorConfig.EditorConfig
 felixfbecker.php-intellisense
 formulahendry.code-runner
 hashicorp.terraform
+KnisterPeter.vscode-github
 mechatroner.rainbow-csv
+ms-vsliveshare.vsliveshare
+ms-vsliveshare.vsliveshare-audio
+ms-vsliveshare.vsliveshare-pack
 neilbrayfield.php-docblocker
 octref.vetur
 onecentlin.laravel-blade
-streetsidesoftware.code-spell-checker
+taichi.vscode-textlint
 vscode-icons-team.vscode-icons
 wmaurer.change-case
-ziyasal.vscode-open-in-github

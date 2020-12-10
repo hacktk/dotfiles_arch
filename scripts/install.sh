@@ -49,6 +49,9 @@ yay -S --needed --noconfirm mysql-workbench
 # noto
 yay -S --needed --noconfirm noto-fonts noto-fonts-cjk noto-fonts-emoji
 
+# npm
+yay -S --needed --noconfirm npm
+
 # peek
 yay -S --needed --noconfirm peek
 
@@ -84,6 +87,9 @@ sed -i -e 's/udp\/l2tp/udp\/%%any/g' src/nm-l2tp-service.c
 make
 sudo make install
 cd $CUR_PATH && rm -rf $NML2TP_PATH
+
+# whois
+yay -S --needed --noconfirm whois
 
 # xrandr
 yay -S --needed --noconfirm xorg-xrandr

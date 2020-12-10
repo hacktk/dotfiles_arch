@@ -42,6 +42,9 @@ fc-cache -fv
 # terraform
 mkdir -p "$HOME/.terraform.d/plugin-cache"
 
+# textlint (/usr/lib/node_modules/ is owned by root, so sudo is required)
+sudo npm install -g textlint
+
 # vscode
 cat "$DOT_PATH/vscode/extensions" | while read line
 do
