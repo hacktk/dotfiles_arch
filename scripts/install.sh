@@ -58,6 +58,9 @@ yay -S --needed --noconfirm peek
 # php
 yay -S --needed --noconfirm php
 
+# samba
+yay -S --needed --noconfirm samba
+
 # ricty
 yay -S --needed --noconfirm fontforge ttf-inconsolata ttf-migu ttf-ricty
 

@@ -39,6 +39,11 @@ ln -fvs "$DOT_PATH/gtk/gtk.css" "$HOME/.config/gtk-3.0/gtk.css"
 # font
 fc-cache -fv
 
+# samba
+sudo ln -fvs "$DOT_PATH/samba/smb.conf" "/etc/samba/smb.conf"
+sudo systemctl enable smb nmb
+sudo pdbedit -a -u hacktk
+
 # terraform
 mkdir -p "$HOME/.terraform.d/plugin-cache"
 
