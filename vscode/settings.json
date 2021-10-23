@@ -44,12 +44,12 @@
     "timeline.excludeSources": [
         "git-history"
     ],
-    "workbench.activityBar.visible": false,
+    "workbench.activityBar.visible": true,
     "workbench.colorCustomizations": {
         "editor.findMatchBorder": "#FFF"
     },
     "workbench.colorTheme": "Monokai",
     "workbench.iconTheme": "vscode-icons",
     "workbench.startupEditor": "newUntitledFile",
-    "workbench.statusBar.visible": false
+    "workbench.statusBar.visible": true
 }

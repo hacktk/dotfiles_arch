@@ -79,5 +79,8 @@ yay -S --needed --noconfirm whois
 # xrandr
 yay -S --needed --noconfirm xorg-xrandr
 
+# xdotool
+yay -S --needed --noconfirm xdotool
+
 # zoom
 yay -S --needed --noconfirm zoom
