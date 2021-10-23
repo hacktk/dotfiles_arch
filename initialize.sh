@@ -3,7 +3,7 @@
 set -eux
 
 # pacman
-curl "https://www.archlinux.org/mirrorlist/?country=JP&protocol=https&ip_version=4" > /etc/pacman.d/mirrorlist
+curl -L "https://www.archlinux.org/mirrorlist/?country=JP&protocol=https&ip_version=4" > /etc/pacman.d/mirrorlist
 sed -i -e 's/#Server/Server/g' /etc/pacman.d/mirrorlist
 sed -i -e 's/#Color/Color/g' /etc/pacman.conf
 pacman -Syy
