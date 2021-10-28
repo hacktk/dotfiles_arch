@@ -20,7 +20,7 @@
         "when": "editorTextFocus"
     },
     {
-        "key": "ctrl+l g",
+        "key": "ctrl+g",
         "command": "vscode-github.browseCurrentFile"
     }
 ]
