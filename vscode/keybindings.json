@@ -21,6 +21,6 @@
     },
     {
         "key": "ctrl+g",
-        "command": "vscode-github.browseCurrentFile"
+        "command": "gitlens.openFileOnRemote"
     }
 ]
