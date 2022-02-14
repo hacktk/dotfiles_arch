@@ -1,10 +1,12 @@
 {
     "breadcrumbs.enabled": false,
+    "editor.bracketPairColorization.enabled": true,
     "editor.cursorBlinking": "blink",
     "editor.cursorStyle": "line-thin",
     "editor.folding": false,
     "editor.fontFamily": "Ricty",
     "editor.fontSize": 16,
+    "editor.guides.bracketPairs": true,
     "editor.links": false,
     "editor.minimap.renderCharacters": false,
     "editor.minimap.showSlider": "always",
@@ -27,6 +29,7 @@
     "gitlens.codeLens.enabled": false,
     "gitlens.currentLine.enabled": false,
     "[markdown]": {
+        "editor.wordWrap": "off",
         "files.trimTrailingWhitespace": false
     },
     "php.suggest.basic": false,
@@ -46,7 +49,7 @@
     "timeline.excludeSources": [
         "git-history"
     ],
-    "workbench.activityBar.visible": true,
+    "window.titleBarStyle": "native",
     "workbench.colorCustomizations": {
         "editor.findMatchBorder": "#FFF"
     },

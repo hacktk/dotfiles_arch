@@ -22,6 +22,7 @@ gsettings set org.gnome.desktop.interface scaling-factor 2
 gsettings set org.gnome.desktop.background picture-uri 'none'
 gsettings set org.gnome.desktop.background primary-color '#444444'
 gsettings set org.gnome.desktop.wm.keybindings panel-run-dialog "['<Control>3']"
+gsettings set org.gnome.desktop.wm.preferences button-layout 'close,minimize,maximize:'
 gsettings set org.gnome.settings-daemon.plugins.media-keys area-screenshot-clip "['<Control><Shift><Super>dollar']"
 gsettings set org.gnome.desktop.input-sources xkb-options "['ctrl:nocaps']"
 gsettings set org.gnome.desktop.peripherals.keyboard repeat-interval 30
