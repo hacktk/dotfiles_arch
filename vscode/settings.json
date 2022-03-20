@@ -1,5 +1,6 @@
 {
     "breadcrumbs.enabled": false,
+    "diffEditor.ignoreTrimWhitespace": false,
     "editor.bracketPairColorization.enabled": true,
     "editor.cursorBlinking": "blink",
     "editor.cursorStyle": "line-thin",
@@ -15,14 +16,11 @@
     "editor.rulers": [
         120
     ],
+    "editor.suggestSelection": "first",
+    "editor.unicodeHighlight.ambiguousCharacters": false,
+    "editor.unicodeHighlight.nonBasicASCII": false,
     "explorer.compactFolders": false,
     "extensions.ignoreRecommendations": true,
-    "files.exclude": {
-        "**/.git": false,
-        "**/.svn": false,
-        "**/.hg": false,
-        "**/CVS": false
-    },
     "files.insertFinalNewline": true,
     "files.trimFinalNewlines": true,
     "files.trimTrailingWhitespace": true,
@@ -33,7 +31,9 @@
         "files.trimTrailingWhitespace": false
     },
     "php.suggest.basic": false,
+    "php.validate.enable": false,
     "search.useIgnoreFiles": false,
+    "security.workspace.trust.untrustedFiles": "open",
     "[terraform]": {
         "editor.formatOnSave": true
     },
@@ -46,15 +46,11 @@
     "terminal.integrated.cursorBlinking": true,
     "terminal.integrated.fontFamily": "Ricty",
     "terminal.integrated.fontSize": 16,
-    "timeline.excludeSources": [
-        "git-history"
-    ],
     "window.titleBarStyle": "native",
     "workbench.colorCustomizations": {
         "editor.findMatchBorder": "#FFF"
     },
     "workbench.colorTheme": "Monokai",
     "workbench.iconTheme": "vscode-icons",
-    "workbench.startupEditor": "newUntitledFile",
-    "workbench.statusBar.visible": true
+    "workbench.startupEditor": "newUntitledFile"
 }

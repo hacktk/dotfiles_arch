@@ -5,12 +5,11 @@ EditorConfig.EditorConfig
 formulahendry.code-runner
 hashicorp.terraform
 mechatroner.rainbow-csv
+mhutchie.git-graph
 ms-vsliveshare.vsliveshare
 ms-vsliveshare.vsliveshare-audio
 ms-vsliveshare.vsliveshare-pack
 neilbrayfield.php-docblocker
-octref.vetur
-onecentlin.laravel-blade
 streetsidesoftware.code-spell-checker
 taichi.vscode-textlint
 vscode-icons-team.vscode-icons

@@ -43,9 +43,6 @@ yay -S --needed --noconfirm hugo
 # ksnip
 yay -S --needed --noconfirm ksnip
 
-# mysql-workbench
-yay -S --needed --noconfirm mysql-workbench
-
 # noto
 yay -S --needed --noconfirm noto-fonts noto-fonts-cjk noto-fonts-emoji
 
