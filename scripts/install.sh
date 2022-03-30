@@ -21,6 +21,11 @@ yay -S --needed --noconfirm dbus-action
 
 # docker
 yay -S --needed --noconfirm docker docker-compose
+DOCKER_COMPOSE_VERSION="v2.3.4"
+DOCKER_CLI_PLUGINS_PATH="/usr/local/lib/docker/cli-plugins"
+sudo mkdir -p $DOCKER_CLI_PLUGINS_PATH
+sudo curl -SL https://github.com/docker/compose/releases/download/$DOCKER_COMPOSE_VERSION/docker-compose-linux-x86_64 -o $DOCKER_CLI_PLUGINS_PATH/docker-compose
+sudo chmod +x $DOCKER_CLI_PLUGINS_PATH/docker-compose
 
 # downgrade
 yay -S --needed --noconfirm downgrade
