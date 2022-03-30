@@ -22,6 +22,9 @@ yay -S --needed --noconfirm dbus-action
 # docker
 yay -S --needed --noconfirm docker docker-compose
 
+# downgrade
+yay -S --needed --noconfirm downgrade
+
 # fcitx, mozc
 yay -S --needed --noconfirm fcitx fcitx-configtool fcitx-mozc fcitx-qt5
 
