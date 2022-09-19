@@ -11,8 +11,8 @@ else
     echo "$DOT_PATH already downloaded. Updating..."
     cd "$DOT_PATH"
     git stash
-    git checkout master
-    git pull origin master
+    git checkout main
+    git pull origin main
     echo
 fi
 cd "$DOT_PATH"

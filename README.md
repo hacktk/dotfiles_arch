@@ -87,7 +87,7 @@ genfstab -U /mnt >> /mnt/etc/fstab
 arch-chroot /mnt
 
 # 初期化スクリプトの実行
-bash -c "$(curl -L https://raw.githubusercontent.com/hacktk/dotfiles_arch/master/initialize.sh)"
+bash -c "$(curl -L https://raw.githubusercontent.com/hacktk/dotfiles_arch/main/initialize.sh)"
 
 # 一旦終了（bootメディアを抜いたあと起動する）
 exit
@@ -106,7 +106,7 @@ shutdown -h now
 ssh-keygen -t rsa -b 4096 -C "hacktk3@gmail.com"
 
 # 実行
-bash -c "$(curl -L https://raw.githubusercontent.com/hacktk/dotfiles_arch/master/setup.sh)"
+bash -c "$(curl -L https://raw.githubusercontent.com/hacktk/dotfiles_arch/main/setup.sh)"
 
 # 終わったら再起動
 ```
