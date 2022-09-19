@@ -17,7 +17,7 @@ gsettings set org.gnome.Terminal.Legacy.Settings default-show-menubar false
 gsettings set org.gnome.Terminal.Legacy.Settings headerbar false
 
 # desktop
-xrandr --output HDMI-A-0 --mode 3840x2160
+xrandr --output DisplayPort-0 --mode 3840x2160
 gsettings set org.gnome.desktop.interface scaling-factor 2
 gsettings set org.gnome.desktop.background picture-uri 'none'
 gsettings set org.gnome.desktop.background primary-color '#444444'
@@ -49,3 +49,8 @@ gsettings set org.gnome.nautilus.preferences default-folder-viewer 'list-view'
 
 # date & time
 timedatectl set-ntp on
+
+# flat-remix
+gsettings set org.gnome.desktop.interface icon-theme 'Flat-Remix-Blue-Dark'
+gsettings set org.gnome.desktop.interface gtk-theme 'Flat-Remix-GTK-Blue-Dark'
+gsettings set org.gnome.shell.extensions.user-theme name 'Flat-Remix-Blue-Dark'

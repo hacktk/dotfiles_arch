@@ -32,10 +32,6 @@ libinput-gestures-setup autostart
 # git
 sudo ln -fvs "/usr/share/git/diff-highlight/diff-highlight" "/usr/local/bin/diff-highlight"
 
-# gtk
-mkdir -p "$HOME/.config/gtk-3.0"
-ln -fvs "$DOT_PATH/gtk/gtk.css" "$HOME/.config/gtk-3.0/gtk.css"
-
 # font
 fc-cache -fv
 
