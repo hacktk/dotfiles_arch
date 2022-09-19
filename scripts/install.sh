@@ -66,6 +66,10 @@ yay -S --needed --noconfirm gnome-shell-extension-dash-to-dock
 # gnome-system-monitor
 yay -S --needed --noconfirm gnome-system-monitor
 
+# gnome-terminal-fedora
+# gnome-terminalとconflictするため、--noconfirmは使えない
+yay -S --needed gnome-terminal-fedora
+
 # google chrome
 yay -S --needed --noconfirm google-chrome
 
