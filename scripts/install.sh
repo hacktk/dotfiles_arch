@@ -10,6 +10,9 @@ git clone https://aur.archlinux.org/yay.git ./
 makepkg -cirs --needed --noconfirm
 cd $CUR_PATH && rm -rf $YAY_PATH
 
+# audacity
+yay -S --needed --noconfirm audacity
+
 # aws-cli
 yay -S --needed --noconfirm aws-cli
 
