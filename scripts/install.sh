@@ -10,6 +10,15 @@ git clone https://aur.archlinux.org/yay.git ./
 makepkg -cirs --needed --noconfirm
 cd $CUR_PATH && rm -rf $YAY_PATH
 
+# 1password
+CUR_PATH=$(pwd)
+ONEPASS_PATH="/dev/shm/onepassword"
+mkdir -p $ONEPASS_PATH && cd $ONEPASS_PATH
+curl -sS https://downloads.1password.com/linux/keys/1password.asc | gpg --import
+git clone https://aur.archlinux.org/1password.git ./
+makepkg -cirs --needed --noconfirm
+cd $CUR_PATH && rm -rf $ONEPASS_PATH
+
 # audacity
 yay -S --needed --noconfirm audacity
 
