@@ -5,8 +5,8 @@
     "editor.cursorBlinking": "blink",
     "editor.cursorStyle": "line-thin",
     "editor.folding": false,
-    "editor.fontFamily": "Ricty",
-    "editor.fontSize": 16,
+    "editor.fontFamily": "UDEV Gothic JPDOC",
+    "editor.fontSize": 14,
     "editor.guides.bracketPairs": true,
     "editor.links": false,
     "editor.minimap.renderCharacters": false,
@@ -14,7 +14,7 @@
     "editor.renderControlCharacters": true,
     "editor.renderWhitespace": "boundary",
     "editor.rulers": [
-        120
+        100
     ],
     "editor.suggestSelection": "first",
     "editor.unicodeHighlight.ambiguousCharacters": false,
@@ -30,22 +30,11 @@
         "editor.wordWrap": "off",
         "files.trimTrailingWhitespace": false
     },
-    "php.suggest.basic": false,
-    "php.validate.enable": false,
     "search.useIgnoreFiles": false,
     "security.workspace.trust.untrustedFiles": "open",
-    "[terraform]": {
-        "editor.formatOnSave": true
-    },
-    "terraform.languageServer": {
-        "external": true,
-        "args": [
-            "serve"
-        ]
-    },
     "terminal.integrated.cursorBlinking": true,
-    "terminal.integrated.fontFamily": "Ricty",
-    "terminal.integrated.fontSize": 16,
+    "terminal.integrated.fontFamily": "UDEV Gothic",
+    "terminal.integrated.fontSize": 14,
     "window.titleBarStyle": "native",
     "workbench.colorCustomizations": {
         "editor.findMatchBorder": "#FFF"

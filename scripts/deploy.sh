@@ -24,6 +24,9 @@ dbus-action-setup autostart
 sudo gpasswd -a $USER docker
 sudo systemctl enable docker
 
+# font
+fc-cache -fv
+
 # gestures
 sudo gpasswd -a $USER input
 ln -fvs "$DOT_PATH/gestures/libinput-gestures.conf" "$HOME/.config/libinput-gestures.conf"
@@ -32,16 +35,10 @@ libinput-gestures-setup autostart
 # git
 sudo ln -fvs "/usr/share/git/diff-highlight/diff-highlight" "/usr/local/bin/diff-highlight"
 
-# font
-fc-cache -fv
-
 # samba
 sudo ln -fvs "$DOT_PATH/samba/smb.conf" "/etc/samba/smb.conf"
 sudo systemctl enable smb nmb
 sudo pdbedit -a -u hacktk
-
-# terraform
-mkdir -p "$HOME/.terraform.d/plugin-cache"
 
 # textlint (/usr/lib/node_modules/ is owned by root, so sudo is required)
 sudo npm install -g textlint
