@@ -97,17 +97,11 @@ yay -S --needed --noconfirm npm
 # peek
 yay -S --needed --noconfirm peek
 
+# ricty
+yay -S --needed --noconfirm fontforge ttf-inconsolata ttf-migu ttf-ricty
+
 # samba
 yay -S --needed --noconfirm samba
-
-# UDEV Gothic
-UDEV_GOTHIC_VERSION="v1.3.0"
-UDEV_GOTHIC_PATH="/dev/shm/udev-gothic"
-CUR_PATH=$(pwd)
-mkdir -p $UDEV_GOTHIC_PATH && cd $UDEV_GOTHIC_PATH
-curl -L https://github.com/yuru7/udev-gothic/releases/download/$UDEV_GOTHIC_VERSION/UDEVGothic_$UDEV_GOTHIC_VERSION.zip -o ./UDEVGothic.zip
-sudo unzip ./UDEVGothic.zip -d /usr/share/fonts/
-cd $CUR_PATH && rm -rf $UDEV_GOTHIC_PATH
 
 # vscode
 yay -S --needed --noconfirm visual-studio-code-bin

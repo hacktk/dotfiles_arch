@@ -5,8 +5,8 @@
     "editor.cursorBlinking": "blink",
     "editor.cursorStyle": "line-thin",
     "editor.folding": false,
-    "editor.fontFamily": "UDEV Gothic JPDOC",
-    "editor.fontSize": 14,
+    "editor.fontFamily": "Ricty",
+    "editor.fontSize": 16,
     "editor.guides.bracketPairs": true,
     "editor.links": false,
     "editor.minimap.renderCharacters": false,
@@ -33,8 +33,8 @@
     "search.useIgnoreFiles": false,
     "security.workspace.trust.untrustedFiles": "open",
     "terminal.integrated.cursorBlinking": true,
-    "terminal.integrated.fontFamily": "UDEV Gothic",
-    "terminal.integrated.fontSize": 14,
+    "terminal.integrated.fontFamily": "Ricty",
+    "terminal.integrated.fontSize": 16,
     "window.titleBarStyle": "native",
     "workbench.colorCustomizations": {
         "editor.findMatchBorder": "#FFF"
