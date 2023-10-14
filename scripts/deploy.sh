@@ -16,21 +16,12 @@ for file in .??*; do
     ln -fvs "$DOT_PATH/$file" "$HOME/$file"
 done
 
-# dbus-action
-ln -fvs "$DOT_PATH/dbus-action/dbus-action.conf" "$HOME/.config/dbus-action.conf"
-dbus-action-setup autostart
-
 # docker
 sudo gpasswd -a $USER docker
 sudo systemctl enable docker
 
 # font
 fc-cache -fv
-
-# gestures
-sudo gpasswd -a $USER input
-ln -fvs "$DOT_PATH/gestures/libinput-gestures.conf" "$HOME/.config/libinput-gestures.conf"
-libinput-gestures-setup autostart
 
 # git
 sudo ln -fvs "/usr/share/git/diff-highlight/diff-highlight" "/usr/local/bin/diff-highlight"

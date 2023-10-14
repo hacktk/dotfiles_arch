@@ -19,17 +19,11 @@ git clone https://aur.archlinux.org/1password.git ./
 makepkg -cirs --needed --noconfirm
 cd $CUR_PATH && rm -rf $ONEPASS_PATH
 
-# audacity
-yay -S --needed --noconfirm audacity
-
 # bash completion
-yay -S --needed --noconfirm bash-completion
-
-# dbus-action
-yay -S --needed --noconfirm dbus-action
+yay -Syu --needed --noconfirm bash-completion
 
 # docker
-yay -S --needed --noconfirm docker docker-compose
+yay -Syu --needed --noconfirm docker docker-compose
 DOCKER_COMPOSE_VERSION="v2.11.0"
 DOCKER_CLI_PLUGINS_PATH="/usr/local/lib/docker/cli-plugins"
 sudo mkdir -p $DOCKER_CLI_PLUGINS_PATH
@@ -37,10 +31,10 @@ sudo curl -SL https://github.com/docker/compose/releases/download/$DOCKER_COMPOS
 sudo chmod +x $DOCKER_CLI_PLUGINS_PATH/docker-compose
 
 # downgrade
-yay -S --needed --noconfirm downgrade
+yay -Syu --needed --noconfirm downgrade
 
 # fcitx, mozc
-yay -S --needed --noconfirm fcitx fcitx-configtool fcitx-mozc fcitx-qt5
+yay -Syu --needed --noconfirm fcitx fcitx-configtool fcitx-mozc fcitx-qt5
 
 # flat-remix-gnome
 CUR_PATH=$(pwd)
@@ -66,54 +60,51 @@ git clone https://aur.archlinux.org/flat-remix.git ./
 makepkg -cirs --needed --noconfirm
 cd $CUR_PATH && rm -rf $FRI_PATH
 
-# gestures
-yay -S --needed --noconfirm libinput-gestures
+# flyctl
+curl -L https://fly.io/install.sh | sh
 
 # gnome-shell-extension-dash-to-dock
-yay -S --needed --noconfirm gnome-shell-extension-dash-to-dock
+yay -Syu --needed --noconfirm gnome-shell-extension-dash-to-dock
 
 # gnome-system-monitor
-yay -S --needed --noconfirm gnome-system-monitor
+yay -Syu --needed --noconfirm gnome-system-monitor
 
 # gnome-terminal-fedora
 # gnome-terminalとconflictするため、--noconfirmは使えない
-yay -S --needed gnome-terminal-fedora
+yay -Syu --needed gnome-terminal-fedora
 
 # google chrome
-yay -S --needed --noconfirm google-chrome
+yay -Syu --needed --noconfirm google-chrome
 
 # hugo
-yay -S --needed --noconfirm hugo
+yay -Syu --needed --noconfirm hugo
 
 # ksnip
-yay -S --needed --noconfirm ksnip
+yay -Syu --needed --noconfirm ksnip
 
 # noto
-yay -S --needed --noconfirm noto-fonts noto-fonts-cjk noto-fonts-emoji
+yay -Syu --needed --noconfirm noto-fonts noto-fonts-cjk noto-fonts-emoji
 
 # npm
-yay -S --needed --noconfirm npm
+yay -Syu --needed --noconfirm npm
 
 # peek
-yay -S --needed --noconfirm peek
+yay -Syu --needed --noconfirm peek
 
 # ricty
-yay -S --needed --noconfirm fontforge ttf-inconsolata ttf-migu ttf-ricty
+yay -Syu --needed --noconfirm fontforge ttf-inconsolata ttf-migu ttf-ricty
 
 # samba
-yay -S --needed --noconfirm samba
+yay -Syu --needed --noconfirm samba
 
 # vscode
-yay -S --needed --noconfirm visual-studio-code-bin
+yay -Syu --needed --noconfirm visual-studio-code-bin
 
 # vlc
-yay -S --needed --noconfirm vlc
+yay -Syu --needed --noconfirm vlc
 
 # whois
-yay -S --needed --noconfirm whois
+yay -Syu --needed --noconfirm whois
 
 # xrandr
-yay -S --needed --noconfirm xorg-xrandr
-
-# xdotool
-yay -S --needed --noconfirm xdotool
+yay -Syu --needed --noconfirm xorg-xrandr
